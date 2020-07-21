@@ -1,0 +1,26 @@
+<div class="container" mt-5>
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <table class="table table-striped">
+            <thead>
+                <tr class="bg-primary text-light mt-5">
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Age</td>
+                    <td>Username</td>
+                    <td>Password</td>
+                    <td>Remove user</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user for users">
+                    <td>{{user.firstname}}</td>
+                    <td>{{user.lastname}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.password}}</td>
+                    <td><button class="btn btn-danger" (click)="removeUser(user.username)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
